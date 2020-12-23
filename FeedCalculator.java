@@ -45,6 +45,9 @@ public class FeedCalculator extends Application{
         groundnutTF.setAlignment(Pos.BOTTOM_RIGHT);
         saltTF.setAlignment(Pos.BOTTOM_RIGHT);
 
+        //calculateBT.setAlignment(Pos.CENTER);
+        //VBox.setValignment(calculateBT, VPos.BOTTOM);
+
        /* maizeLB.setAlignment(Pos.BOTTOM_LEFT);
         soyaLB.setAlignment(Pos.BOTTOM_LEFT);
         groundnutLB.setAlignment(Pos.BOTTOM_LEFT);
@@ -52,20 +55,20 @@ public class FeedCalculator extends Application{
 
 
         Label label = new Label();
-         VBox vBox = new VBox(5);
-     //vBox.getChildren().addAll(maizeTF, soyaTF, groundnutTF, saltTF, calculateBT);
-     //vBox.getChildren().add(label);
+         VBox vBox = new VBox(2);
+     //vBox.getChildren().addAll(maizeTF, soyaTF, groundnutTF, saltTF, calculateBT
      //label.setAlignment(Pos.BOTTOM_RIGHT);
      vBox.getChildren().addAll(new Label("Maize:"), maizeTF, new Label("Soya:"), soyaTF, new Label("Groundnut:"), groundnutTF, new Label("Salt:"), saltTF, calculateBT);
     // VBox getVBox(){
           //VBox vBox = new VBox(15);
- vBox.setSpacing(10);
+ vBox.setSpacing(5);
  //vBox.setAlignment(Pos.BOTTOM_RIGHT);
- vBox.setPadding(new Insets(15, 5, 5, 5));
+ vBox.setPadding(new Insets(5, 5, 5, 5));
  //return vBox;
     // }
+calculateBT.setOnAction(e -> calculations());
 
-        Scene scene = new Scene(vBox);
+        Scene scene = new Scene(vBox, 400, 400);
             //setting the title
      primaryStage.setTitle("FeedCalculator"); 
      primaryStage.setResizable(false);
@@ -74,14 +77,24 @@ public class FeedCalculator extends Application{
      primaryStage.show();
        
 
-      calculateBT.setOnAction(new EventHandler<ActionEvent>(){
+     /* calculateBT.setOnAction(new EventHandler<ActionEvent>(){
         public void handle(ActionEvent e){
             calculate.setText("Calculate");
         }
-        });
+        });*/
+        
     }
      
-
+public void calculations() {
+        double maize =
+    Double.parseDouble(maizeTF.getText());
+    double soya =
+    Double.parseDouble(soyaTF.getText());
+    double groundnut =
+    Double.parseDouble(groundnutTF.getText());
+    double salt =
+    Double.parseDouble(saltTF.getText());
+ }
 
 
  //vBox.add(new Label("Maize:"));
