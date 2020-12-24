@@ -51,6 +51,7 @@ public class FeedCalculator extends Application{
         soyaTF.setAlignment(Pos.BOTTOM_RIGHT);
         groundnutTF.setAlignment(Pos.BOTTOM_RIGHT);
         saltTF.setAlignment(Pos.BOTTOM_RIGHT);
+        calculateBT.setAlignment(Pos.CENTER);
 
          VBox vBox = new VBox(2);
      //vBox.getChildren().addAll(maizeTF, soyaTF, groundnutTF, saltTF, calculateBT
